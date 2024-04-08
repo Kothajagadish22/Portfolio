@@ -9,7 +9,7 @@
     </head>
     <body>
 
-    </body>
+    
     <div id="header">
         <div class="container">
             <nav>
@@ -41,9 +41,29 @@
                         To associate with an organization to utilize my knowledge and skills which will help me achieve personal as well as organizational goals in the field of mechanical, computers and electronics. My name is jagadish currently graduated B-Tech Mechanical engineering with aggregate of 8.56 CGPA . I did my intermediate at andhra loyola jr college vijaywada with aggregate of 9.54 CGPA .I completed my schooling at ST mary's high school with aggregate of 9.7. My aim is to work for the betterment of society and also to secure a position that challenges me and provides me an opportunity to enhance my abilities , my achievements are getting a global rank 1800 in Tcs codevita,got a rank in 246 conducted by interviewbit called codedrift,I combinedly solve more than 300+ problems on hackerrank,codechef ,leetcode 5 star coder on hackerrank and 3 star coder in leetcode.I had done two internships apart from regular academics that on full stack developer role and data analyst with paid internship atlast I also qualified baja aptitude test (BAT) conducted by overall India from SAE
                     </p>
                     <div class="tab-titles">
-                        <p class="tab-links">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Python developer</span><br>Automated the work of excel and web</li>
+                            <li><span>Web development</span><br>Web app developer</li>
+                            <li><span>competetive programmer</span><br> 500+ problem solved</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023-Current</span><br>Data Analyst at Arcadia</li>
+                            <li><span>2022-2023</span><br>Full stack developer at sudy owl</li>
+                            <li><span>2020-2021</span><br> Web Developer at Data Exposys labs</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019-2023</span><br>B-Tech at vishnu institute of technology</li>
+                            
+                        </ul>
                     </div>
 
                 </div>
@@ -51,6 +71,19 @@
             </div>
         </div>
     </div>
-
-
+<script>
+    var  tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
 </html>
